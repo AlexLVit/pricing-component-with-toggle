@@ -1,0 +1,227 @@
+body {
+  background-color: hsl(240, 78%, 98%);
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-position: right top, left bottom;
+  background-repeat: no-repeat;
+  color: hsl(232, 13%, 33%);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+p {
+  padding: 7px 0;
+}
+
+button {
+  margin: 12px 0;
+}
+
+.toggle__container {
+  display: flex;
+  justify-content: center;
+}
+
+.price__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.price__month {
+  font-size: 3.5vw;
+  margin: 0;
+}
+
+.dollar__month {
+  font-size: 2.5vw;
+  margin: 20px 0 0 0;
+  height: 20%;
+}
+
+.price__year {
+  display: none;
+  font-size: 4.5em;
+  margin: 0;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 12px 20px 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: hsl(236, 72%, 79%);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px hsl(236, 72%, 79%);
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.main__container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.first__box,
+.third__box {
+  height: auto;
+  width: 22%;
+  background-color: white;
+  border-radius: 4%;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 25px;
+  -webkit-box-shadow: 0px 0px 5px 0px hsl(234, 14%, 74%);
+  -moz-box-shadow: 0px 0px 5px 0pxhsl(234, 14%, 74%);
+  box-shadow: 0px 0px 5px 0px hsl(234, 14%, 74%);
+}
+
+.second__box {
+  height: auto;
+  width: 22%;
+  background-color: white;
+  border-radius: 4%;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  text-align: center;
+  padding: 25px 20px;
+  margin-bottom: -25px;
+  color: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.side__button {
+  width: 70%;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.middle__button {
+  width: 70%;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 2px;
+  color: hsl(237, 63%, 64%);
+  text-transform: uppercase;
+}
+
+.side__button:hover {
+  color: hsl(237, 63%, 64%);
+  background: white;
+  border: #CCC 0.5px solid;
+}
+
+.middle__button:hover {
+  color: white;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+@media (min-width: 375px) and (max-width:710px){
+  
+  h1{
+    margin: 15px 20px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .toggle__container{
+    margin: 15px 20px;
+  }
+  .main__container{
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .first__box,
+  .third__box{
+    width: 85%;
+    padding: 12px;
+    margin: 5%;
+  }
+  .second__box{
+    width: 85%;
+    padding: 12px;
+    margin: 5%;
+  }
+  .price__year{
+    font-size: 2.5em;
+  }
+  .price__month{
+    font-size: 2.5em;
+  }
+  .dollar__month{
+    font-size: 1.5em;
+    margin: 10px 0 0 ;
+  }
+  footer{
+    width: 100%;
+  }
+}
